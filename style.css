@@ -2,4 +2,47 @@ body {
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+/* .btn {
+    display: flex;
+    position: relative;
+} */
+
+.btn .switch-btn{
+    -webkit-appearance: none;
+    appearance: none;
+    height: 100px;
+    width: 200px;
+    border-radius: 50px;
+    background-color: beige;
+    outline: none;
+    border: 1px solid #5c6e5c;
+    position: relative;
+    transition: 600ms;
+}
+
+.btn .switch-btn:checked {
+    background-color: aquamarine;
+}
+
+.btn .switch-btn::before {
+    content: "";
+    height: 98px;
+    width: 98px;
+    background-color: rgb(109, 164, 173);
+    position: absolute;
+    border-radius: 50px;
+    top: 0;
+    left: 0;
+    transition: 500ms;
+}
+
+.btn .switch-btn:checked::before {
+    left: 100px;
+    background-color: rgb(37, 182, 207);
 }
